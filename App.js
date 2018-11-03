@@ -9,6 +9,9 @@ export default class App extends React.Component {
         <Text style={styles.paragraph}>
           Olá Mundo!
         </Text>
+        <Text style={styles.paragraph}>
+          Vamos começar a aprender React Native?
+        </Text>
       </View>
     );
   }
