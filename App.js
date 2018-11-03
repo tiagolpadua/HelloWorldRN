@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { Constants } from 'expo';
+import { Mensagem } from './components/Mensagem';
 
 export default class App extends React.Component {
   render() {
@@ -9,9 +10,8 @@ export default class App extends React.Component {
         <Text style={styles.paragraph}>
           Olá Mundo!
         </Text>
-        <Text style={styles.paragraph}>
-          Vamos começar a aprender React Native?
-        </Text>
+        {/* Novidade aqui! */}
+        <Mensagem />
       </View>
     );
   }
