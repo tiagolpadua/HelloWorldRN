@@ -7,11 +7,8 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.paragraph}>
-          Olá Mundo!
-        </Text>
-        
         {/* Novidade aqui! */}
+        <Mensagem texto="Olá Mundo via props!"/>
         <Mensagem texto="Passando propriedades dinamicamente!"/>
       </View>
     );
@@ -25,11 +22,5 @@ const styles = StyleSheet.create({
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#ecf0f1',
     padding: 8,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
+  }
 });
