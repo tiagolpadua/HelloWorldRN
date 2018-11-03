@@ -10,8 +10,9 @@ export default class App extends React.Component {
         <Text style={styles.paragraph}>
           Olá Mundo!
         </Text>
+        
         {/* Novidade aqui! */}
-        <Mensagem />
+        <Mensagem texto="Passando propriedades dinamicamente!"/>
       </View>
     );
   }

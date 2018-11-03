@@ -5,7 +5,9 @@ export class Mensagem extends React.Component {
   render() {
     return (
         <Text style={styles.paragraph}>
-            Nosso primeiro componente React Native!
+            
+            {/* Novidade aqui! */}
+            {this.props.texto}
         </Text>
     );
   }
