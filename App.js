@@ -7,6 +7,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { clicks: 0 };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
@@ -18,7 +19,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Button title={`Clicou ${this.state.clicks} vezes`} onPress={this.handleClick.bind(this)}></Button>
+        <Button title={`Clicou ${this.state.clicks} vezes`} onPress={this.handleClick}></Button>
       </View>
     );
   }
