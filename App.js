@@ -1,15 +1,24 @@
-import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
 import { Constants } from 'expo';
-import { Mensagem } from './components/Mensagem';
+import * as React from 'react';
+import { Button, StyleSheet, View } from 'react-native';
 
 export default class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { clicks: 0 };
+  }
+
+  handleClick() {
+    this.setState({
+      clicks: this.state.clicks + 1
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        {/* Novidade aqui! */}
-        <Mensagem texto="Olá Mundo via props!"/>
-        <Mensagem texto="Passando propriedades dinamicamente!"/>
+        <Button title={`Clicou ${this.state.clicks} vezes`} onPress={this.handleClick.bind(this)}></Button>
       </View>
     );
   }
