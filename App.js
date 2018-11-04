@@ -10,9 +10,7 @@ export default class App extends React.Component {
   }
 
   handleClick = () => {
-    this.setState({
-      clicks: this.state.clicks + 1
-    });
+    this.setState(prevState => ({ clicks: prevState.clicks + 1 }));
   }
 
   render() {
