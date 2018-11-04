@@ -7,6 +7,19 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { clicks: 0 };
+    console.log('O componente foi construído.');
+  }
+
+  componentDidMount() {
+    console.log('O componente foi montado.');
+  }
+
+  componentDidUpdate() {
+    console.log('O componente foi atualizado.');
+  }
+
+  componentWillUnmount() {
+    console.log('O componente será desmontado.');
   }
 
   handleClick = () => {
