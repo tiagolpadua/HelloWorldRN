@@ -1,6 +1,7 @@
 import { Constants } from 'expo';
 import * as React from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Mensagem } from './components/Mensagem';
 
 export default class App extends React.Component {
 
@@ -8,24 +9,11 @@ export default class App extends React.Component {
     super(props);
   }
 
-  formatMessage(message = '') {
-    let el;
-    if(message.length > 2) {
-      el = <Text>{message.toUpperCase()}</Text>;
-    } else {
-      el = <Text>{message}</Text>;
-    }
-    return el;
-  }
-
   render() {
-    const nome = 'José';
-    const saudacao = 'oi';
-
+    const minhaMsg = 'Olá José';
     return (
       <View style={styles.container}>
-        {this.formatMessage(saudacao)}
-        {this.formatMessage(nome)}
+        <Mensagem texto={minhaMsg} />
       </View>
     );
   }
