@@ -27,6 +27,7 @@ export default class App extends React.Component {
   }
 
   render() {
+    console.log('Render foi acionado.');
     return (
       <View style={styles.container}>
         <Button title={`Clicou ${this.state.clicks} vezes`} onPress={this.handleClick}></Button>
